@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
+// import React from "react";
 import Link from "next/link";
 // import { ThemeToggle } from "@/components/theme-toggler";
 // import { NavLink } from "./navlink";
-import { Logo } from "./logo";
+// import { Logo } from "./logo";
 // import { Button } from "@/components/ui/button";
 // import { Search } from 'lucide-react'; 
 import { useCommandPalette } from "./command-palette-context";
