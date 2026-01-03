@@ -51,7 +51,7 @@ export default function IconGrid() {
           placeholder="Search icons..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-5 py-4 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-black/5 transition-all shadow-sm text-black"
+          className="w-full px-5 py-4 bg-white dark:bg-black/50 border border-gray-200 dark:border-zinc-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-black/5 transition-all shadow-sm text-black dark:text-white"
         />
       </div>
 
@@ -62,7 +62,7 @@ export default function IconGrid() {
             type="button"
             onClick={() => handleCopy(name)}
             className={cn(
-              "relative flex flex-col items-center justify-center p-6 bg-white border rounded-2xl transition-all duration-300 active:scale-95",
+              "relative flex flex-col items-center justify-center p-6 bg-white dark:bg-black/50 dark:border-zinc-700 border rounded-2xl transition-all duration-300 active:scale-95",
               "hover:shadow-xl hover:border-gray-300",
               copied === name ? "border-green-500 ring-2 ring-green-500/20" : "border-gray-100"
             )}
@@ -86,13 +86,13 @@ export default function IconGrid() {
             >
               {copied === name ? (
                 <>
-                  <Check className="w-6 h-6 text-green-600 mb-1" />
-                  <span className="text-[10px] font-bold text-green-700">COPIED</span>
+                  <Check className="w-6 h-6 text-zinc-500 dark:text-zinc-500 mb-1" />
+                  <span className="text-[10px] font-bold text-zinc-500 dark:text-zinc-500">COPIED</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-6 h-6 text-gray-400 mb-1" />
-                  <span className="text-[10px] font-bold text-gray-400">COPY CODE</span>
+                  <Copy className="w-6 h-6 text-gray-400 dark:text-zinc-500 mb-1" />
+                  <span className="text-[10px] font-bold text-gray-400 dark:text-zinc-500">COPY CODE</span>
                 </>
               )}
             </div>
