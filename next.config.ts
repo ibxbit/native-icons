@@ -2,17 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  transpilePackages: ['react-native', 'react-native-svg'],
+  transpilePackages: ['react-native', 'react-native-web', 'react-native-svg'],
   
-  // We use 'as any' here to stop the red underline 
-  // while ensuring Turbopack gets the alias it needs.
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        'react-native': 'react-native-web',
-      },
+  // In Next.js 16+, 'experimental.turbo' moved to a top-level 'turbopack' key
+  turbopack: {
+    resolveAlias: {
+      'react-native': 'react-native-web',
     },
-  } as any,
+  },
 
   webpack: (config) => {
     config.resolve.alias = {
