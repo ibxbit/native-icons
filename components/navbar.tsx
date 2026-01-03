@@ -2,11 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/theme-toggler";
+// import { ThemeToggle } from "@/components/theme-toggler";
 // import { NavLink } from "./navlink";
 import { Logo } from "./logo";
-import { Button } from "@/components/ui/button";
-import { Search } from 'lucide-react'; 
+// import { Button } from "@/components/ui/button";
+// import { Search } from 'lucide-react'; 
 import { useCommandPalette } from "./command-palette-context";
 
 
@@ -57,7 +57,7 @@ export const Navbar = (/* No props needed here */) => {
               </svg>
             </Link>
           </ul>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
       </nav>
     </div>
