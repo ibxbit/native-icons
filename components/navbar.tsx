@@ -3,9 +3,9 @@
 // import React from "react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggler";
-// import { NavLink } from "./navlink";
+import { NavLink } from "./navlink";
 // import { Logo } from "./logo";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 // import { Search } from 'lucide-react'; 
 import { useCommandPalette } from "./command-palette-context";
 
@@ -34,11 +34,11 @@ export const Navbar = (/* No props needed here */) => {
         </Link>
         <div className="md:col-span-10 flex items-center justify-end relative">
           <ul className="md:flex items-center divide-x w-max border-r hidden shrink-0">
-            {/* {navMenu.map((menu, i) => (
+            {navMenu.map((menu, i) => (
               <NavLink key={i} href={menu.path}>
                 {menu.name}
               </NavLink>
-            ))} */}
+            ))}
             <Link
               href="https://github.com/ibxbit/native-icons"
               className="bg-muted/20 border-l ring-0 rounded-none h-14 w-14 shrink-0 flex justify-center items-center"
@@ -57,6 +57,19 @@ export const Navbar = (/* No props needed here */) => {
               </svg>
             </Link>
           </ul>
+          <Button
+            variant="outline"
+            className="ml-2 flex items-center space-x-2"
+
+            onClick={() => setOpen(true)}
+          >
+            <search className="h-4 w-4" />
+            <span>Search</span>
+            <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+              <span className="text-xs">⌘</span>K
+            </kbd>
+
+          </Button>
           <ThemeToggle />
         </div>
       </nav>

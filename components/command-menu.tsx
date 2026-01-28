@@ -11,6 +11,7 @@ import {
   CommandList,
 } from '@/components/ui/command';
 import { searchItems } from '@/lib/search-data';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 interface CommandMenuProps {
   open: boolean;
@@ -27,6 +28,7 @@ export function CommandMenu({ open, onOpenChange }: CommandMenuProps) {
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
+      <DialogTitle className='sr-only'>command palete</DialogTitle>
       <CommandInput placeholder="Search documentation..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
